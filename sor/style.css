@@ -1,0 +1,150 @@
+*{
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(design/teglafal.jpg);
+}
+
+main{
+    display: grid;
+    margin: auto;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #333333;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    " h h"
+    "ar as"
+    "f f"
+    ;
+}
+
+header{
+    grid-area: h;
+    background-image: url(design/beer-new_401732638.jpg);
+    height: 300px;
+    background-size: cover;
+    font-weight: bold;
+}
+
+header h1{
+    font-weight: bold;
+    font-family: Garamond;
+    letter-spacing: 4px;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+article{
+    grid-area: ar;
+    background-color: black;
+    padding: 15px;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+    background-color: gray;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+nav{
+    padding: 10px;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    padding-left: 15px;
+    padding: 10px;
+}
+
+nav li{
+    list-style-type: none;
+    border: white 1px solid;
+    border-radius: 10px;
+}
+
+nav li:hover{
+    background-color: lightcyan;
+    
+}
+
+a:hover{
+    color: white;
+}
+
+article p{
+    font-size: 15px;
+}
+
+article h3{
+    font-size: 20px;
+}
+
+article img{
+    float: left;
+    height: 30%;
+    width: auto;
+}
+
+article li{
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+article table{
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+article table tr td{
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+}
+article table th{
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+tr:nth-child(2){
+    background: lightgray;
+}
+
+tr:nth-child(4){
+    background: lightgray;
+}
+
+@media only screen and (max-width: 700px) {
+    main *{
+        display: block;
+        margin: auto;
+        width: 80%;
+        max-width: 1000px;
+        background-color: #333333;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h"
+        "ar" 
+        "as"
+        "f"
+        ;
+        }
+}
+
